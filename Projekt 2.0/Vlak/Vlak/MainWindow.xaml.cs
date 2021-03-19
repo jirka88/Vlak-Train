@@ -52,7 +52,7 @@ namespace Vlak
             {
                 ScaleTransform flipvagon = new ScaleTransform();
                 RotateTransform Transformace = new RotateTransform();
-                Rectangle posledni = vagon_1.vagony.First();
+                Rectangle posledni = vagony.vagonysvlakem.First();
                 posledni.RenderTransformOrigin = new Point(0.5, 0.5);
 
                 cSloupce *= 50;
@@ -85,8 +85,8 @@ namespace Vlak
                         posledni.RenderTransform = Transformace;
                         break;
                 }
-                vagon_1.vagony.RemoveAt(0);
-                vagon_1.vagony.Add(posledni);
+                vagony.vagonysvlakem.RemoveAt(0);
+                vagony.vagonysvlakem.Add(posledni);
             }
         }
         public Thickness pohybovani(int right, int down)
@@ -119,7 +119,7 @@ namespace Vlak
                     break;
             }
 
-            foreach (var item in vagon_1.vagony)         //kontrola samotné kolize vlaku s vagonem 
+            foreach (var item in vagony.vagonysvlakem)         //kontrola samotné kolize vlaku s vagonem 
             {
                 if (vlakLeft == item.Margin.Left && vlakTop == item.Margin.Top)
                 {
@@ -182,6 +182,7 @@ namespace Vlak
         protected ScaleTransform flipvlak = new ScaleTransform();
         protected RotateTransform Transformace = new RotateTransform();
         public static Grid MRIZ;
+        public static List<Rectangle> vagonysvlakem = new List<Rectangle>();
         protected vagony(int vlevo, int nahoru)
         {
             vagonn = new Rectangle();
@@ -194,8 +195,7 @@ namespace Vlak
         }
     }
     class vagon_1 : vagony
-    {   
-        public static List<Rectangle> vagony = new List<Rectangle>();
+    {        
         public vagon_1(int vlevo, int nahoru) : base(vlevo, nahoru)
         {
             ImageBrush diamond = new ImageBrush();
@@ -204,7 +204,7 @@ namespace Vlak
         }
         public void seber(int x, int y, int cRadku, int cSloupce)
         {
-            vagon_1.vagony.Add(vagonn);
+            vagonysvlakem.Add(vagonn);
             sebers.Play();
             ImageBrush vagon = new ImageBrush();
             vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagon1.png", UriKind.Relative));
@@ -253,7 +253,7 @@ namespace Vlak
         }
         public void seber(int x, int y, int cRadku, int cSloupce)
         {
-            vagon_1.vagony.Add(vagonn);
+            vagonysvlakem.Add(vagonn);
             sebers.Play();
             ImageBrush vagon = new ImageBrush();
             vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagon2.png", UriKind.Relative));
@@ -303,7 +303,7 @@ namespace Vlak
         }
         public void seber(int x, int y, int cRadku, int cSloupce)
         {
-            vagon_1.vagony.Add(vagonn);
+            vagonysvlakem.Add(vagonn);
             sebers.Play();
             ImageBrush vagon = new ImageBrush();
             vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagon3.png", UriKind.Relative));
@@ -390,7 +390,7 @@ namespace Vlak
         vagon_2 koruna;
         vagon_3 strom;
         StreamReader cti;  
-        DispatcherTimer casvlak = new DispatcherTimer();
+        DispatcherTimer casvlak = new DispatcherTimer();    
        
 
         int x = 0;
@@ -483,6 +483,7 @@ namespace Vlak
                     {
                         ((vagon_2)vagony).seber(x, y, cRadku, cSloupce);
                     }
+
                     rozlozeni.nastav(cRadku, cSloupce, null);
                     mamvagon = true;
 
@@ -500,7 +501,7 @@ namespace Vlak
                     {
                         vlakname.pripoj(cRadku, cSloupce, x, y);
                         if (pozice.Top == Brana.brana1.Margin.Top && pozice.Left == Brana.brana1.Margin.Left)            //výhra pokud je dodržena podmínka
-                        {
+                        {                  
                             casvlak.Stop();
                             vyhra = false;
                         }
@@ -537,6 +538,9 @@ namespace Vlak
                         break;
                     default:
                         break;
+                    case "mydlo":
+                        level = 3;
+                        break;
                 }
                 zacatek();
                 heslo = false;
@@ -553,7 +557,7 @@ namespace Vlak
           
             MainWindow.maxskore = 0;
             MainWindow.maxskore += MainWindow.skore;
-            vagon_1.vagony.Clear();
+            vagon_1.vagonysvlakem.Clear();
             hranice.wall.Clear();
             vlak.pohyb = true;
             mamvagon = false;
@@ -646,6 +650,7 @@ namespace Vlak
         {
             Application.Current.Shutdown();
         }
+            
     }
 }
        
