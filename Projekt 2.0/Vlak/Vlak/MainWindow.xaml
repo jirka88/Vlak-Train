@@ -94,9 +94,9 @@
                 </Image.RenderTransform>
             </Image>
         </Grid>
-        <Grid x:Name="password" Visibility="Hidden">
+        <Grid x:Name="password" Visibility="hidden">
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="148" Margin="379,445,0,0" VerticalAlignment="Top" Width="311" Background="#72595959">
-                <TextBox x:Name="hesla" TextWrapping="Wrap" Text="Heslo" Margin="9,55,10,57" Background="{x:Null}" TextAlignment="Center" FontSize="24" BorderBrush="{x:Null}" Foreground="White"/>
+                <TextBox x:Name="hesla" TextWrapping="Wrap" Text="Heslo" Margin="9,55,10,57" Background="{x:Null}" TextAlignment="Center" FontSize="24" BorderBrush="{x:Null}" Foreground="White" GotFocus="passworddelete"/>
             </Border>
 
         </Grid>

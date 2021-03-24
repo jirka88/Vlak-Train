@@ -382,6 +382,8 @@ namespace Vlak
         bool mamvagon = false;
         bool vyhra = true;
         bool heslo = false;
+        bool start = false;
+        
 
         vlak vlakname;
         hranice Wall;
@@ -404,60 +406,62 @@ namespace Vlak
             hranice.MRIZ = pole;
             casvlak.Interval = new TimeSpan(0, 0, 0, 0, 250);
             casvlak.Tick += pohybA;            
-            zacatek();
+            
         }
 
 
         private void pohyb(object sender, KeyEventArgs e)
         {
-            if (vlak.pohyb && vyhra && heslo == false)
+            if (start)
             {
-                switch (e.Key)
+                if (vlak.pohyb && vyhra && !heslo)
                 {
-                    case Key.Right:
-                        x = 50;
-                        y = 0;
-                        casvlak.Start();
-                        break;
-                    case Key.Up:
-                        x = 0;
-                        y = -50;
-                        casvlak.Start();
-                        break;
-                    case Key.Down:
-                        x = 0;
-                        y = 50;
-                        casvlak.Start();
-                        break;
-                    case Key.Left:
-                        x = -50;
-                        y = 0;
-                        casvlak.Start();
-                        break;
-                    case Key.F4:
-                        password.Visibility = Visibility.Visible;
-                        heslo = true;
-                        casvlak.Stop();          
-                        break;
-                }             
-            }
-            else if (vyhra == false)
-            {
-                switch (e.Key)
+                    switch (e.Key)
+                    {
+                        case Key.Right:
+                            x = 50;
+                            y = 0;
+                            casvlak.Start();
+                            break;
+                        case Key.Up:
+                            x = 0;
+                            y = -50;
+                            casvlak.Start();
+                            break;
+                        case Key.Down:
+                            x = 0;
+                            y = 50;
+                            casvlak.Start();
+                            break;
+                        case Key.Left:
+                            x = -50;
+                            y = 0;
+                            casvlak.Start();
+                            break;
+                        case Key.F4:
+                            password.Visibility = Visibility.Visible;
+                            heslo = true;
+                            casvlak.Stop();
+                            break;
+                    }
+                }
+                else if (!vyhra)
                 {
-                    case Key.Enter:
-                        level += 1;
-                        zacatek();  
-                        casvlak.Stop();
-                        break;
+                    switch (e.Key)
+                    {
+                        case Key.Enter:
+                            level += 1;
+                            zacatek();
+                            casvlak.Stop();
+                            break;
+                    }
+                }
+                else if (heslo)
+                {
+                    zkontrolujheslo(e);
                 }
             }
-            else if(heslo)
-            {
-                zkontrolujheslo(e);            
-            }          
-         }
-
+        }
         private void pohybA(object sender, EventArgs e)
         {
             if (vlak.pohyb)
@@ -641,16 +645,25 @@ namespace Vlak
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {        
+        {
+            start = true;
             pole.Visibility = Visibility.Visible;
             menu.Visibility = Visibility.Hidden;
+            zacatek();       
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
-            
+
+      
+
+        private void passworddelete(object sender, RoutedEventArgs e)
+        {
+                           
+                hesla.Text = "";          
+        }
     }
 }
        
