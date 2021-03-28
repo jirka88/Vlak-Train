@@ -532,7 +532,7 @@ namespace Vlak
         {
             if (e.Key == Key.Enter)
             {
-                switch (hesla.Text)
+                switch (hesla.Text.ToLower())
                 {
                     case "diamond":
                         level = 1;
