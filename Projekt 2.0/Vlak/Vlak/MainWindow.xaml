@@ -48,8 +48,6 @@
                             <Trigger Property="IsMouseOver" Value="true">
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -69,7 +67,7 @@
             <Label x:Name="kroky" Content="Kroky: 0" HorizontalAlignment="Left" Margin="73,731,0,0" VerticalAlignment="Top" Width="222" Background="#00000000" Foreground="White" FontSize="25" FontWeight="Bold"/>
             <Label x:Name="jmenolevelu" Content="Label" HorizontalAlignment="Left" Margin="601,731,0,0" VerticalAlignment="Top" Foreground="#FF00FF17" FontSize="25"/>
         </Grid>
-        <Grid x:Name="menu" Background="black"  >
+        <Grid x:Name="menu" Background="black">
             <Button x:Name="btn1" Content="hrát" HorizontalAlignment="Left" Margin="417,410,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click" Height="65" FontSize="24" FontFamily="Verdana" Background="#FF0097FF" BorderBrush="#FF000000" BorderThickness="1" Style="{DynamicResource ButtonStyle1}" Cursor="Hand"/>
             <Button x:Name="btn2" Content="odejít" HorizontalAlignment="Left" Margin="417,625,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click2" Height="65" FontSize="24" FontFamily="Verdana" Background="#FF0097FF" BorderBrush="#FF000000" BorderThickness="1" Style="{DynamicResource ButtonStyle1}" Cursor="Hand"/>
             <Button x:Name="btn3" Content="ovládání" HorizontalAlignment="Left" Margin="417,518,0,0" VerticalAlignment="Top" Width="239" Height="65" FontSize="24" FontFamily="Verdana" Background="#FF0097FF" BorderBrush="#FF000000" BorderThickness="1" Style="{DynamicResource ButtonStyle1}" Cursor="Hand"/>
@@ -94,9 +92,9 @@
                 </Image.RenderTransform>
             </Image>
         </Grid>
-        <Grid x:Name="password" Visibility="hidden">
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="148" Margin="379,445,0,0" VerticalAlignment="Top" Width="311" Background="#72595959">
-                <TextBox x:Name="hesla" TextWrapping="Wrap" Text="Heslo" Margin="9,55,10,57" Background="{x:Null}" TextAlignment="Center" FontSize="24" BorderBrush="{x:Null}" Foreground="White" GotFocus="passworddelete"/>
+        <Grid x:Name="password" Visibility="Hidden">
+            <Border BorderThickness="2" CornerRadius="8" HorizontalAlignment="Left" Height="157" Margin="380,432,0,0" VerticalAlignment="Top" Width="311" Background="#99363636" BorderBrush="Black">
+                <TextBox x:Name="hesla" TextWrapping="Wrap" Text="Heslo" Margin="9,55,10,61" Background="{x:Null}" TextAlignment="Center" FontSize="25" BorderBrush="{x:Null}" Foreground="White" GotKeyboardFocus="passworddelete" SelectionBrush="#FF0078D7"/>
             </Border>
 
         </Grid>

@@ -100,19 +100,19 @@ namespace Vlak.Properties {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  
-        ///0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  
-        ///0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0   
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0   
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 [zbytek řetězce byl zkrácen];.
+        ///   Vyhledá lokalizovaný řetězec podobný Diamond
+        ///9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9  
+        ///9 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9  
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 
+        ///9 0 0 11 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 9   
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 9 
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 0 [zbytek řetězce byl zkrácen];.
         /// </summary>
         public static string level1 {
             get {
@@ -121,18 +121,19 @@ namespace Vlak.Properties {
         }
         
         /// <summary>
-        ///   Vyhledá lokalizovaný řetězec podobný 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  
-        ///0 0 0 0 0 0 2 0 2 0 2 0 2 0 0 0 0 0 0 0  
-        ///0 0 0 0 0 0 2 2 2 2 2 2 2 0 0 0 0 0 0 0   
-        ///0 0 0 0 0 0 2 2 2 2 2 2 2 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 2 2 2 2 2 2 2 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 10 10 10 10 10 10 10 10 0 0 0 0 0 0 0   
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-        ///0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 [zbytek řetězce byl zkrácen];.
+        ///   Vyhledá lokalizovaný řetězec podobný Kral
+        ///9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 
+        ///9 0 0 0 0 0 0 2 0 2 0 2 0 2 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 2 2 2 2 2 2 2 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 2 2 2 2 2 2 2 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 2 2 2 2 2 2 2 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 9 9 9 9 9 9 9 9 9 0 0 0 0 0 9
+        ///9 0 0 11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9
+        ///9 0 0 0 0 0 0 0 0 0 0 0 0 0 0  [zbytek řetězce byl zkrácen];.
         /// </summary>
         public static string level2 {
             get {
@@ -176,16 +177,6 @@ namespace Vlak.Properties {
         public static System.IO.UnmanagedMemoryStream seber {
             get {
                 return ResourceManager.GetStream("seber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap vagon1 {
-            get {
-                object obj = ResourceManager.GetObject("vagon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

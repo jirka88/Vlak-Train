@@ -207,7 +207,7 @@ namespace Vlak
             vagonysvlakem.Add(vagonn);
             sebers.Play();
             ImageBrush vagon = new ImageBrush();
-            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagon1.png", UriKind.Relative));
+            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagony/vagon1.png", UriKind.Relative));
             vagonn.Fill = vagon;
             vagonn.RenderTransformOrigin = new Point(0.5, 0.5);
 
@@ -256,7 +256,7 @@ namespace Vlak
             vagonysvlakem.Add(vagonn);
             sebers.Play();
             ImageBrush vagon = new ImageBrush();
-            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagon2.png", UriKind.Relative));
+            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagony/vagon2.png", UriKind.Relative));
             vagonn.Fill = vagon;
             vagonn.RenderTransformOrigin = new Point(0.5, 0.5);
 
@@ -306,7 +306,7 @@ namespace Vlak
             vagonysvlakem.Add(vagonn);
             sebers.Play();
             ImageBrush vagon = new ImageBrush();
-            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagon3.png", UriKind.Relative));
+            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagony/vagon3.png", UriKind.Relative));
             vagonn.Fill = vagon;
             vagonn.RenderTransformOrigin = new Point(0.5, 0.5);
 
@@ -408,8 +408,6 @@ namespace Vlak
             casvlak.Tick += pohybA;            
             
         }
-
-
         private void pohyb(object sender, KeyEventArgs e)
         {
             if (start)
@@ -537,7 +535,7 @@ namespace Vlak
                     case "diamond":
                         level = 1;
                         break;
-                    case "král":
+                    case "kral":
                         level = 2;
                         break;
                     default:
@@ -572,9 +570,7 @@ namespace Vlak
             pole.Children.Add(kroky);
             pole.Children.Add(scena);
             pole.Children.Add(jmenolevelu);
-           
-
-            
+                      
             Skore.Content = "Skore: " + MainWindow.skore;                   //reset skore
 
             krok = 0;
@@ -656,13 +652,10 @@ namespace Vlak
         {
             Application.Current.Shutdown();
         }
-
-      
-
-        private void passworddelete(object sender, RoutedEventArgs e)
+   
+        private void passworddelete(object sender, KeyboardFocusChangedEventArgs e)
         {
-                           
-                hesla.Text = "";          
+            hesla.Text = "";
         }
     }
 }
