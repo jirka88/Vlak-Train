@@ -52,7 +52,7 @@ namespace Vlak
             {
                 ScaleTransform flipvagon = new ScaleTransform();
                 RotateTransform Transformace = new RotateTransform();
-                Rectangle posledni = vagony.vagonysvlakem.First();
+                Rectangle posledni = Vagony.vagonysvlakem.First();
                 posledni.RenderTransformOrigin = new Point(0.5, 0.5);
 
                 cSloupce *= 50;
@@ -85,8 +85,8 @@ namespace Vlak
                         posledni.RenderTransform = Transformace;
                         break;
                 }
-                vagony.vagonysvlakem.RemoveAt(0);
-                vagony.vagonysvlakem.Add(posledni);
+                Vagony.vagonysvlakem.RemoveAt(0);
+                Vagony.vagonysvlakem.Add(posledni);
             }
         }
         public Thickness pohybovani(int right, int down)
@@ -119,7 +119,7 @@ namespace Vlak
                     break;
             }
 
-            foreach (var item in vagony.vagonysvlakem)         //kontrola samotné kolize vlaku s vagonem 
+            foreach (var item in Vagony.vagonysvlakem)         //kontrola samotné kolize vlaku s vagonem 
             {
                 if (vlakLeft == item.Margin.Left && vlakTop == item.Margin.Top)
                 {
@@ -127,8 +127,8 @@ namespace Vlak
                     break;
                 }
             }
-           
-            foreach (var item in hranice.wall)
+                     
+            foreach (var item in Hranice.wall)
             {
                 if(vlakLeft == item.Margin.Left && vlakTop == item.Margin.Top)
                 {
@@ -136,14 +136,10 @@ namespace Vlak
                     break;
                 }
             }
+
             if (pohyb)
             {
-                if (vlakLeft < 1000 && vlakLeft > 0 && vlakTop > 0 && vlakTop < 650)     //pohyb 
-                {
-                    vlakV.Margin = new Thickness(vlakLeft, vlakTop, 0, 0);
-                }
-
-                else if (vlakLeft == Brana.brana1.Margin.Left && vlakTop == Brana.brana1.Margin.Top) //vstup do brány
+                if (vlakLeft == Brana.brana1.Margin.Left && vlakTop == Brana.brana1.Margin.Top) //vstup do brány
                 {
                     if (MainWindow.skore == MainWindow.maxskore)
                     {
@@ -155,7 +151,13 @@ namespace Vlak
                     {
                         smrt(down);
                     }
-                }            
+                }
+                else if (vlakLeft < 1000 && vlakLeft > 0 && vlakTop > 0 && vlakTop < 650)     //pohyb 
+                {                                                       
+                    vlakV.Margin = new Thickness(vlakLeft, vlakTop, 0, 0);                  
+                }
+               
+
             }
             return vlakV.Margin;
         }       
@@ -175,205 +177,10 @@ namespace Vlak
             vlakV.Fill = znicenyVlak;
         }
     } 
-    class vagony
-    {
-        protected Rectangle vagonn;
-        protected SoundPlayer sebers = new SoundPlayer(Properties.Resources.seber);
-        protected ScaleTransform flipvlak = new ScaleTransform();
-        protected RotateTransform Transformace = new RotateTransform();
-        public static Grid MRIZ;
-        public static List<Rectangle> vagonysvlakem = new List<Rectangle>();
-        protected vagony(int vlevo, int nahoru)
-        {
-            vagonn = new Rectangle();
-            vagonn.Width = 50;
-            vagonn.Height = 50;
-            vagonn.Margin = new Thickness(vlevo, nahoru, 0, 0);
-            vagonn.VerticalAlignment = VerticalAlignment.Top;
-            vagonn.HorizontalAlignment = HorizontalAlignment.Left;
-            MRIZ.Children.Add(vagonn);
-        }
-    }
-    class vagon_1 : vagony
-    {        
-        public vagon_1(int vlevo, int nahoru) : base(vlevo, nahoru)
-        {
-            ImageBrush diamond = new ImageBrush();
-            diamond.ImageSource = new BitmapImage(new Uri(@"../../Resources/Diamond.png", UriKind.Relative));
-            vagonn.Fill = diamond;
-        }
-        public void seber(int x, int y, int cRadku, int cSloupce)
-        {
-            vagonysvlakem.Add(vagonn);
-            sebers.Play();
-            ImageBrush vagon = new ImageBrush();
-            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagony/vagon1.png", UriKind.Relative));
-            vagonn.Fill = vagon;
-            vagonn.RenderTransformOrigin = new Point(0.5, 0.5);
 
-            cSloupce *= 50;
-            cRadku *= 50;
-            switch (x)
-            {
-                case 50:
-                    vagonn.Margin = new Thickness(cSloupce - 50, cRadku, 0, 0);
-                    flipvlak.ScaleX = 1;
-                    vagonn.RenderTransform = flipvlak;
-                    break;
-
-                case -50:
-                    vagonn.Margin = new Thickness(cSloupce + 50, cRadku, 0, 0);
-                    flipvlak.ScaleX = -1;
-                    vagonn.RenderTransform = flipvlak;
-                    break;
-            }
-            switch (y)
-            {
-                case 50:
-                    vagonn.Margin = new Thickness(cSloupce, cRadku - 50, 0, 0);
-                    Transformace = new RotateTransform(90);
-                    vagonn.RenderTransform = Transformace;
-                    break;
-
-                case -50:
-                    vagonn.Margin = new Thickness(cSloupce, cRadku + 50, 0, 0);
-                    Transformace = new RotateTransform(270);
-                    vagonn.RenderTransform = Transformace;
-                    break;
-            }
-        }       
-    }
-    class vagon_2 : vagony
-    {    
-        public vagon_2(int vlevo, int nahoru) : base(vlevo, nahoru)
-        {
-            ImageBrush diamond = new ImageBrush();
-            diamond.ImageSource = new BitmapImage(new Uri(@"../../Resources/koruna.png", UriKind.Relative));
-            vagonn.Fill = diamond;
-        }
-        public void seber(int x, int y, int cRadku, int cSloupce)
-        {
-            vagonysvlakem.Add(vagonn);
-            sebers.Play();
-            ImageBrush vagon = new ImageBrush();
-            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagony/vagon2.png", UriKind.Relative));
-            vagonn.Fill = vagon;
-            vagonn.RenderTransformOrigin = new Point(0.5, 0.5);
-
-            cSloupce *= 50;
-            cRadku *= 50;
-            switch (x)
-            {
-                case 50:
-                    vagonn.Margin = new Thickness(cSloupce - 50, cRadku, 0, 0);
-                    flipvlak.ScaleX = 1;
-                    vagonn.RenderTransform = flipvlak;
-                    break;
-
-                case -50:
-                    vagonn.Margin = new Thickness(cSloupce + 50, cRadku, 0, 0);
-                    flipvlak.ScaleX = -1;
-                    vagonn.RenderTransform = flipvlak;
-                    break;
-            }
-            switch (y)
-            {
-                case 50:
-                    vagonn.Margin = new Thickness(cSloupce, cRadku - 50, 0, 0);
-                    Transformace = new RotateTransform(90);
-                    vagonn.RenderTransform = Transformace;
-                    break;
-
-                case -50:
-                    vagonn.Margin = new Thickness(cSloupce, cRadku + 50, 0, 0);
-                    Transformace = new RotateTransform(270);
-                    vagonn.RenderTransform = Transformace;
-                    break;
-            }
-        }             
-
-    }
-    class vagon_3 : vagony
-    {
-        public vagon_3(int vlevo, int nahoru) : base(vlevo, nahoru)
-        {
-            ImageBrush diamond = new ImageBrush();
-            diamond.ImageSource = new BitmapImage(new Uri(@"../../Resources/strom.png", UriKind.Relative));
-            vagonn.Fill = diamond;
-        }
-        public void seber(int x, int y, int cRadku, int cSloupce)
-        {
-            vagonysvlakem.Add(vagonn);
-            sebers.Play();
-            ImageBrush vagon = new ImageBrush();
-            vagon.ImageSource = new BitmapImage(new Uri(@"../../Resources/vagony/vagon3.png", UriKind.Relative));
-            vagonn.Fill = vagon;
-            vagonn.RenderTransformOrigin = new Point(0.5, 0.5);
-
-            cSloupce *= 50;
-            cRadku *= 50;
-            switch (x)
-            {
-                case 50:
-                    vagonn.Margin = new Thickness(cSloupce - 50, cRadku, 0, 0);
-                    flipvlak.ScaleX = 1;
-                    vagonn.RenderTransform = flipvlak;
-                    break;
-
-                case -50:
-                    vagonn.Margin = new Thickness(cSloupce + 50, cRadku, 0, 0);
-                    flipvlak.ScaleX = -1;
-                    vagonn.RenderTransform = flipvlak;
-                    break;
-            }
-            switch (y)
-            {
-                case 50:
-                    vagonn.Margin = new Thickness(cSloupce, cRadku - 50, 0, 0);
-                    Transformace = new RotateTransform(90);
-                    vagonn.RenderTransform = Transformace;
-                    break;
-
-                case -50:
-                    vagonn.Margin = new Thickness(cSloupce, cRadku + 50, 0, 0);
-                    Transformace = new RotateTransform(270);
-                    vagonn.RenderTransform = Transformace;
-                    break;
-            }
-        }
-
-    }
-
-    class Brana 
-    {
-        private Rectangle gate;
-        public static Rectangle brana1 = new Rectangle();
-        public Brana(Grid MRIZ, int vlevo, int nahoru) 
-        {
-            gate = new Rectangle();
-            gate.Width = 50;
-            gate.Height = 50;
-            gate.Margin = new Thickness(vlevo, nahoru, 0, 0);
-            gate.VerticalAlignment = VerticalAlignment.Top;
-            gate.HorizontalAlignment = HorizontalAlignment.Left;
-            MRIZ.Children.Add(gate);
-            ImageBrush Branatextura = new ImageBrush();
-            Branatextura.ImageSource = new BitmapImage(new Uri("../../Resources/brana.png", UriKind.Relative));
-            gate.Fill = Branatextura;
-            Panel.SetZIndex(gate, 1);
-            brana1 = gate;                 
-        }
-        public void otevrise()
-        {
-            ImageBrush Branaotevrena = new ImageBrush();
-            Branaotevrena.ImageSource = new BitmapImage(new Uri("../../Resources/otevrenabrana.png", UriKind.Relative));
-            gate.Fill = Branaotevrena;
-        }
-    }
-  
     public partial class MainWindow : Window
     {
-        mapa rozlozeni;
+        Mapa rozlozeni;
         MessageBoxResult odpoved;
         int krok = 0;
         public static int skore = 0;
@@ -386,9 +193,9 @@ namespace Vlak
         
 
         vlak vlakname;
-        hranice Wall;
+        Hranice Wall;
         Brana Gate;
-        vagon_1 Diamond;
+        Vagon_1 Diamond;
         vagon_2 koruna;
         vagon_3 strom;
         StreamReader cti;  
@@ -400,10 +207,10 @@ namespace Vlak
         public MainWindow()
         {
             InitializeComponent();
-            mapa rozlozeni = new mapa();
+            Mapa rozlozeni = new Mapa();
             vlak.MRIZ = pole;
-            vagony.MRIZ = pole;
-            hranice.MRIZ = pole;
+            Vagony.MRIZ = pole;
+            Hranice.MRIZ = pole;
             casvlak.Interval = new TimeSpan(0, 0, 0, 0, 250);
             casvlak.Tick += pohybA;            
             
@@ -469,23 +276,22 @@ namespace Vlak
                 int cRadku = Convert.ToInt32(pozice.Top) / 50;
                 int cSloupce = Convert.ToInt32(pozice.Left) / 50;
                 kroky.Content = "Kroky: " + krok;
-                vagony vagony = rozlozeni.precti(cRadku, cSloupce);
+                Vagony vagony = rozlozeni.precti(cRadku, cSloupce);
 
                 if (vagony != null)                 
                 {
-                    if (vagony.GetType().Name == "vagon_1")
+                    switch(vagony.GetType().Name)
                     {
-                        ((vagon_1)vagony).seber(x, y, cRadku, cSloupce);
-                    }
-                    else if (vagony.GetType().Name == "vagon_2")
-                    {
-                        ((vagon_2)vagony).seber(x, y, cRadku, cSloupce);
-                    }
-                    else if (vagony.GetType().Name == "vagon_3")
-                    {
-                        ((vagon_2)vagony).seber(x, y, cRadku, cSloupce);
-                    }
-
+                        case "vagon_1":
+                            ((Vagon_1)vagony).seber(x, y, cRadku, cSloupce);
+                        break;
+                        case "vagon_2":
+                            ((vagon_2)vagony).seber(x, y, cRadku, cSloupce);
+                            break;
+                        case "vagon_3":
+                            ((vagon_3)vagony).seber(x, y, cRadku, cSloupce);
+                            break;
+                    }                                                        
                     rozlozeni.nastav(cRadku, cSloupce, null);
                     mamvagon = true;
 
@@ -559,8 +365,8 @@ namespace Vlak
           
             MainWindow.maxskore = 0;
             MainWindow.maxskore += MainWindow.skore;
-            vagon_1.vagonysvlakem.Clear();
-            hranice.wall.Clear();
+            Vagon_1.vagonysvlakem.Clear();        
+            Hranice.wall.Clear();
             vlak.pohyb = true;
             mamvagon = false;
             vyhra = true;
@@ -574,10 +380,9 @@ namespace Vlak
             Skore.Content = "Skore: " + MainWindow.skore;                   //reset skore
 
             krok = 0;
-            kroky.Content = "Kroky: " + krok;  
-           
+            kroky.Content = "Kroky: " + krok;            
                                                    
-            rozlozeni = new mapa();                                         //vytvoření nové mapy
+            rozlozeni = new Mapa();                                         //vytvoření nové mapy
             
             scena.Content = $"Scena " + level;
         
@@ -585,13 +390,13 @@ namespace Vlak
             for (int i = 0; i < 3; i++)
             {
                 down += 50;
-                Wall = new hranice(0, down);
-                Wall = new hranice(1000, down);
+                Wall = new Hranice(0, down);
+                Wall = new Hranice(1000, down);
             }
             for (int a = 0; a < 19; a++)
             {
                 left += 50;                                
-                Wall = new hranice(left, 800);             
+                Wall = new Hranice(left, 800);             
             }
 
             //LEVELOVÁNÍ
@@ -610,7 +415,7 @@ namespace Vlak
                     switch (objekty[j])
                     {
                         case "1":
-                            Diamond = new vagon_1(vlevo, nahoru);
+                            Diamond = new Vagon_1(vlevo, nahoru);
                             rozlozeni.nastav(nahoru / 50, vlevo / 50, Diamond);
                             MainWindow.maxskore += 10;
                             break;
@@ -625,12 +430,12 @@ namespace Vlak
                             MainWindow.maxskore += 10;
                             break;
                         case "9":                          
-                               Wall = new hranice(vlevo, nahoru);                                                        
+                               Wall = new Hranice(vlevo, nahoru);                                                        
                             break;
-                        case "10":                           
+                        case "B":                           
                                 Gate = new Brana(pole, vlevo, nahoru);                                                       
                             break;
-                        case "11":                            
+                        case "V":                            
                                 vlakname = new vlak(vlevo, nahoru);
                             break;
                     }                                                              

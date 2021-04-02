@@ -81,7 +81,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image HorizontalAlignment="Left" Height="139" Margin="67,490,0,0" VerticalAlignment="Top" Width="129" Source="vagon1.png" RenderTransformOrigin="0.5,0.5">
+            <Image HorizontalAlignment="Left" Height="139" Margin="68,494,0,0" VerticalAlignment="Top" Width="129" Source="vagon1.png" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
