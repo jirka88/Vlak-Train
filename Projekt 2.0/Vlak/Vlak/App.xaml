@@ -4,9 +4,10 @@
              xmlns:local="clr-namespace:Vlak"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="minecraftfont">
+        <!--<Style x:Key="minecraftfont">
             <Setter Property="TextElement.FontFamily"
                 Value="/Resources/#Minecraft"/>
-        </Style>
+        </Style>-->
+        
     </Application.Resources>
 </Application>

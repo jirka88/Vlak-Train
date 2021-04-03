@@ -282,7 +282,7 @@ namespace Vlak
                 {
                     switch(vagony.GetType().Name)
                     {
-                        case "vagon_1":
+                        case "Vagon_1":
                             ((Vagon_1)vagony).seber(x, y, cRadku, cSloupce);
                         break;
                         case "vagon_2":

@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Vlak
 {
-    class mapa
+    class Mapa
     {
-        private vagony[,] map = new vagony[18, 22];
-        public mapa()
+        private Vagony[,] map = new Vagony[18, 22];
+        public Mapa()
         {
 
         }
-        public void nastav(int radek, int sloupec, vagony hodnota)
+        public void nastav(int radek, int sloupec, Vagony hodnota)
         {
             map[radek, sloupec] = hodnota;
 
         }
-        public vagony precti(int radek, int sloupec)
+        public Vagony precti(int radek, int sloupec)
         {
             return map[radek, sloupec];                 //zjistí jestli jsme na vagonu
         }

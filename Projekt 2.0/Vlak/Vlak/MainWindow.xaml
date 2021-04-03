@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Vlak"
         mc:Ignorable="d"       
         ResizeMode="NoResize"                       
-        Title="Vlak" Width="1067" KeyUp="pohyb" Height="890" FontFamily="Minecraft Regular">
+        Title="Vlak" Width="1067" KeyUp="pohyb" Height="890" WindowStartupLocation="CenterScreen" FontFamily="Minecraft Regular" >
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -61,7 +61,7 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="GUI">
-        <Grid x:Name="pole" Visibility="Hidden"  Background="black">
+        <Grid x:Name="pole" Visibility="Hidden" Background="black">
             <Label x:Name="scena" Content="Scena 1" HorizontalAlignment="Left" Margin="799,731,0,0" VerticalAlignment="Top" Width="154" Background="#00000000" Foreground="White" FontSize="25" />
             <Label x:Name="Skore" Content="Skore: 0" HorizontalAlignment="Left" Margin="404,731,0,0" VerticalAlignment="Top" Width="246" Background="#00000000" FontSize="25" FontWeight="Bold"  Foreground="#FFF3FF00" />
             <Label x:Name="kroky" Content="Kroky: 0" HorizontalAlignment="Left" Margin="73,731,0,0" VerticalAlignment="Top" Width="222" Background="#00000000" Foreground="White" FontSize="25" FontWeight="Bold"/>
