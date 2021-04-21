@@ -11,12 +11,12 @@ using System.Windows.Shapes;
 
 namespace Vlak
 {
-    class Hranice
+    class hranice
     {
         private Rectangle border;
         public static Grid MRIZ;
         public static List<Rectangle> wall = new List<Rectangle>();
-        public Hranice(int left, int down)
+        public hranice(int left, int down)
         {
             border = new Rectangle();
             border.Width = 50;
@@ -28,7 +28,7 @@ namespace Vlak
             ImageBrush HraniceTex = new ImageBrush();
             HraniceTex.ImageSource = new BitmapImage(new Uri("../../Resources/hranice.png", UriKind.Relative));
             border.Fill = HraniceTex;
-            Hranice.wall.Add(border);
+            hranice.wall.Add(border);
         }
     }
 }
