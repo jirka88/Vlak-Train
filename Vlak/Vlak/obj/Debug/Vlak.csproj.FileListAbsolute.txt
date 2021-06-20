@@ -1,0 +1,74 @@
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak.csprojAssemblyReference.cache
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\MainWindow.g.cs
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\App.g.cs
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.cache
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.lref
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\bin\Debug\Vlak.exe.config
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\bin\Debug\Vlak.exe
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\bin\Debug\Vlak.pdb
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\MainWindow.baml
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak.g.resources
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak.Properties.Resources.resources
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak.csproj.GenerateResource.cache
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak.csproj.CoreCompileInputs.cache
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak.exe
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak.pdb
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\Vlak_Content.g.cs
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\bin\Debug\Properties\Resources.resx
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\bin\Debug\Properties\Resources.Designer.cs
+C:\Users\jn88\Desktop\Projekt\Vlak\Vlak\obj\Debug\App.baml
+E:\programování IT\Projekt\Vlak\Vlak\bin\Debug\Properties\Resources.resx
+E:\programování IT\Projekt\Vlak\Vlak\bin\Debug\Properties\Resources.Designer.cs
+E:\programování IT\Projekt\Vlak\Vlak\bin\Debug\Vlak.exe.config
+E:\programování IT\Projekt\Vlak\Vlak\bin\Debug\Vlak.exe
+E:\programování IT\Projekt\Vlak\Vlak\bin\Debug\Vlak.pdb
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak.csprojAssemblyReference.cache
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\MainWindow.g.cs
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\App.g.cs
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak_Content.g.cs
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.cache
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.lref
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\App.baml
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\MainWindow.baml
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak.g.resources
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak.Properties.Resources.resources
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak.csproj.GenerateResource.cache
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak.csproj.CoreCompileInputs.cache
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak.exe
+E:\programování IT\Projekt\Vlak\Vlak\obj\Debug\Vlak.pdb
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\bin\Debug\Properties\Resources.resx
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\bin\Debug\Vlak.exe.config
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\bin\Debug\Vlak.exe
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\bin\Debug\Vlak.pdb
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\MainWindow.g.cs
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\App.g.cs
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak_Content.g.cs
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.cache
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.lref
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\MainWindow.baml
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.g.resources
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.Properties.Resources.resources
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.csproj.GenerateResource.cache
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.csproj.CoreCompileInputs.cache
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.exe
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.pdb
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.csprojAssemblyReference.cache
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\MainWindow.g.cs
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\App.g.cs
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak_Content.g.cs
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.cache
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak_MarkupCompile.lref
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.exe
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.pdb
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\bin\Debug\Properties\Resources.resx
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\bin\Debug\Properties\Resources.Designer.cs
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\bin\Debug\Vlak.exe.config
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\bin\Debug\Vlak.exe
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\bin\Debug\Vlak.pdb
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\App.baml
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\MainWindow.baml
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.g.resources
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.Properties.Resources.resources
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.csproj.GenerateResource.cache
+C:\Users\jn88\Desktop\Vlak-Train-main\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.csproj.CoreCompileInputs.cache
+C:\Users\jn88\Desktop\Projekt 2.0\Vlak\Vlak\obj\Debug\Vlak.csproj.AssemblyReference.cache
