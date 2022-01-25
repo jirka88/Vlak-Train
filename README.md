@@ -3,7 +3,7 @@ CZ: Počítačová hra na způsob originální hry Vlak od Miroslava Němečka.
 
 EN: Computer game based on the original game Train by Miroslav Němeček.
 
-## technologies 
+## Technologies 
 
 C#, XAML, Adobe Photoshop, Audiocity
 
